@@ -1,9 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    color: #000000;
-    /* font-family: 'Montserrat', sans-serif; */
-    /* font-weight: 400; */
-    background: #ffffff;
+    /* color: #000000; */
+    /* background: #ffffff; */
+    background-image: url("assets/img/fond.png");
 }
 
 .back-to-top {

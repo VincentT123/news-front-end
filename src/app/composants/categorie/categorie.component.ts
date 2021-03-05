@@ -54,8 +54,8 @@ export class CategorieComponent implements OnInit {
       console.log("res : ", res);
       this.listeActus = res;
       console.log("listeActus : ", this.listeActus);
-      console.log("random1 : ", Math.floor(Math.random() * this.listeActus.length));
-      console.log("random2 : ", Math.floor(Math.random() * this.listeActus.length));
+      // console.log("random1 : ", Math.floor(Math.random() * this.listeActus.length));
+      // console.log("random2 : ", Math.floor(Math.random() * this.listeActus.length));
     });
     
   }
