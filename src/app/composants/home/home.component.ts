@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Actus } from 'src/app/interfaces/actus';
 import { ActusService } from 'src/app/services/actus.service';
 
@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
   lus: Actus = {};
   listeLus: Array <Actus> = new Array <Actus>();
 
-  constructor(private actusService: ActusService ,private route : ActivatedRoute) { }
+  constructor(private actusService: ActusService ,private route : ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     

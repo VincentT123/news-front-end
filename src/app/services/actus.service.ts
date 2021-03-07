@@ -12,6 +12,7 @@ export class ActusService {
   urlCar: string = 'http://localhost:8080/actus/carous';
   urlPan: string = 'http://localhost:8080/actus/panel';
   urlCat: string = 'http://localhost:8080/actus/categ';
+  urlActu: string = 'http://localhost:8080/actus/actu';
   urlFil: string = 'http://localhost:8080/actus/filactus';
   urlLus: string = 'http://localhost:8080/actus/pluslus';
   actus: Array<Actus> = new Array<Actus>();
@@ -49,6 +50,20 @@ export class ActusService {
   // Recupère une liste d'actus selon une catégorie
   getCat(cat: string): Observable<any> {
     let API_URL = `${this.urlCat}/${cat}`;
+    console.log("API_URL : ", API_URL);
+    
+    return this.http.get(API_URL)
+      .pipe(
+        map((res: any) => {
+          return res.rows || {}
+        }),
+        catchError(this.errorMgmt)
+      )
+  }
+
+  // Recupère une actu selon son id
+  getActu(id: number): Observable<any> {
+    let API_URL = `${this.urlActu}/${id}`;
     console.log("API_URL : ", API_URL);
     
     return this.http.get(API_URL)

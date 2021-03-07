@@ -8,6 +8,7 @@ import { HeaderComponent } from './composants/header/header.component';
 import { FooterComponent } from './composants/footer/footer.component';
 import { CategorieComponent } from './composants/categorie/categorie.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UneactuComponent } from './composants/uneactu/uneactu.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    CategorieComponent
+    CategorieComponent,
+    UneactuComponent
   ],
   imports: [
     BrowserModule,

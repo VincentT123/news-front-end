@@ -4,7 +4,7 @@
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item" *ngFor="let car of listeCar;let i=index" [ngClass]="i == 0 ? 'active' : ''">
-                        <img src="{{car.adr_img}}" class="d-block w-100" alt="image">
+                        <a routerLink="uneactu/{{car.ID_actu}}"><img src="{{car.adr_img}}" class="d-block w-100" alt="image"></a>
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
@@ -22,7 +22,7 @@
         <div class="col-md-6">
             <div class="row row-cols-2 gy-3">
                 <div class="col" *ngFor="let pan of listePan">
-                    <img src="{{pan.adr_img}}" class="img-fluid" alt="image">
+                    <a routerLink="uneactu/{{pan.ID_actu}}"><img src="{{pan.adr_img}}" class="img-fluid" alt="image"></a>
                 </div>
             </div>
         </div>
@@ -38,7 +38,7 @@
             <hr>
             <div class="row">
                 <div class="col-md-6" *ngFor="let pol of listePol">
-                    <img src="{{pol.adr_img}}" class="img-fluid" alt="image">
+                    <a routerLink="uneactu/{{pol.ID_actu}}"><img src="{{pol.adr_img}}" class="img-fluid" alt="image"></a>
                 </div>
             </div>
         </div>
@@ -47,7 +47,7 @@
             <hr>
             <div class="row">
                 <div class="col-md-6" *ngFor="let int of listeInt">
-                    <img src="{{int.adr_img}}" class="img-fluid" alt="image">
+                    <a routerLink="uneactu/{{int.ID_actu}}"><img src="{{int.adr_img}}" class="img-fluid" alt="image"></a>
                 </div>
             </div>
         </div>
@@ -60,7 +60,7 @@
             <hr>
             <div class="row">
                 <div class="col-md-6" *ngFor="let soc of listeSoc">
-                    <img src="{{soc.adr_img}}" class="img-fluid" alt="image">
+                    <a routerLink="uneactu/{{soc.ID_actu}}"><img src="{{soc.adr_img}}" class="img-fluid" alt="image"></a>
                 </div>
             </div>
         </div>
@@ -69,7 +69,7 @@
             <hr>
             <div class="row">
                 <div class="col-md-6" *ngFor="let cul of listeCul">
-                    <img src="{{cul.adr_img}}" class="img-fluid" alt="image">
+                    <a routerLink="uneactu/{{cul.ID_actu}}"><img src="{{cul.adr_img}}" class="img-fluid" alt="image"></a>
                 </div>
             </div>
         </div>
@@ -86,7 +86,7 @@
             <div class="card mb-3" *ngFor="let fil of listeFil">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="{{fil.adr_img}}" class="img-fluid" alt="image">
+                        <a routerLink="uneactu/{{fil.ID_actu}}"><img src="{{fil.adr_img}}" class="img-fluid" alt="image"></a>
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
@@ -102,7 +102,7 @@
             <div class="card mb-3" *ngFor="let lus of listeLus">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="{{lus.adr_img}}" class="img-fluid" alt="image">
+                        <a routerLink="uneactu/{{lus.ID_actu}}"><img src="{{lus.adr_img}}" class="img-fluid" alt="image"></a>
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
@@ -116,6 +116,5 @@
     </div>
 </div>
 <br><br>
-
 
 <app-footer></app-footer>
