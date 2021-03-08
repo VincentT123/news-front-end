@@ -64,6 +64,7 @@ export class HomeComponent implements OnInit {
       let a = Math.floor(Math.random() * this.listePol.length);
       let b = Math.floor(Math.random() * this.listePol.length);
       if (a==b) { b=Math.floor(Math.random() * this.listePol.length) }
+      if (a==b) { b=Math.floor(Math.random() * this.listePol.length) }
       const result = this.listePol.filter((el,i) => i === a || i === b);
       this.listePol = result;
       console.log("a : ", a, " - b : ", b);
@@ -75,6 +76,7 @@ export class HomeComponent implements OnInit {
       this.listeInt = res;
       let a = Math.floor(Math.random() * this.listeInt.length);
       let b = Math.floor(Math.random() * this.listeInt.length);
+      if (a==b) { b=Math.floor(Math.random() * this.listeInt.length) }
       if (a==b) { b=Math.floor(Math.random() * this.listeInt.length) }
       const result = this.listeInt.filter((el,i) => i === a || i === b);
       this.listeInt = result;
@@ -88,6 +90,7 @@ export class HomeComponent implements OnInit {
       let a = Math.floor(Math.random() * this.listeSoc.length);
       let b = Math.floor(Math.random() * this.listeSoc.length);
       if (a==b) { b=Math.floor(Math.random() * this.listeSoc.length) }
+      if (a==b) { b=Math.floor(Math.random() * this.listeSoc.length) }
       const result = this.listeSoc.filter((el,i) => i === a || i === b);
       this.listeSoc = result;
       console.log("a : ", a, " - b : ", b);
@@ -99,6 +102,7 @@ export class HomeComponent implements OnInit {
       this.listeCul = res;
       let a = Math.floor(Math.random() * this.listeCul.length);
       let b = Math.floor(Math.random() * this.listeCul.length);
+      if (a==b) { b=Math.floor(Math.random() * this.listeCul.length) }
       if (a==b) { b=Math.floor(Math.random() * this.listeCul.length) }
       const result = this.listeCul.filter((el,i) => i === a || i === b);
       this.listeCul = result;

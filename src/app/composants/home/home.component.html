@@ -4,7 +4,11 @@
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item" *ngFor="let car of listeCar;let i=index" [ngClass]="i == 0 ? 'active' : ''">
-                        <a routerLink="uneactu/{{car.ID_actu}}"><img src="{{car.adr_img}}" class="d-block w-100" alt="image"></a>
+                        <a routerLink="uneactu/{{car.ID_actu}}">
+                            <img src="{{car.adr_img}}" class="d-block w-100" alt="image">
+                            <div class="carousel-caption"><h3 class="txtborder">{{car.titre}}</h3></div>
+                        </a>
+                        
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
@@ -18,11 +22,17 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
+            <br>
         </div>
         <div class="col-md-6">
             <div class="row row-cols-2 gy-3">
-                <div class="col" *ngFor="let pan of listePan">
-                    <a routerLink="uneactu/{{pan.ID_actu}}"><img src="{{pan.adr_img}}" class="img-fluid" alt="image"></a>
+                <div class="col card text-white noborder" *ngFor="let pan of listePan">
+                    <a routerLink="uneactu/{{pan.ID_actu}}" class="text-reset">
+                        <img src="{{pan.adr_img}}" class="img-fluid" alt="image">
+                        <div class="card-img-overlay text-center text-wrap">
+                            <p class="card-text txtborder">{{pan.titre}}</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -37,8 +47,13 @@
             <h2>Politique</h2>
             <hr>
             <div class="row">
-                <div class="col-md-6" *ngFor="let pol of listePol">
-                    <a routerLink="uneactu/{{pol.ID_actu}}"><img src="{{pol.adr_img}}" class="img-fluid" alt="image"></a>
+                <div class="col-md-6 card text-white noborder" *ngFor="let pol of listePol">
+                    <a routerLink="uneactu/{{pol.ID_actu}}" class="text-reset">
+                        <img src="{{pol.adr_img}}" class="img-fluid card-img" alt="image">
+                        <div class="card-img-overlay text-center">
+                            <p class="card-text txtborder">{{pol.titre}}</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -46,8 +61,13 @@
             <h2>International</h2>
             <hr>
             <div class="row">
-                <div class="col-md-6" *ngFor="let int of listeInt">
-                    <a routerLink="uneactu/{{int.ID_actu}}"><img src="{{int.adr_img}}" class="img-fluid" alt="image"></a>
+                <div class="col-md-6 card text-white noborder" *ngFor="let int of listeInt">
+                    <a routerLink="uneactu/{{int.ID_actu}}" class="text-reset">
+                        <img src="{{int.adr_img}}" class="img-fluid card-img" alt="image">
+                        <div class="card-img-overlay text-center">
+                            <p class="card-text txtborder">{{int.titre}}</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -59,8 +79,13 @@
             <h2>Société</h2>
             <hr>
             <div class="row">
-                <div class="col-md-6" *ngFor="let soc of listeSoc">
-                    <a routerLink="uneactu/{{soc.ID_actu}}"><img src="{{soc.adr_img}}" class="img-fluid" alt="image"></a>
+                <div class="col-md-6 card text-white noborder" *ngFor="let soc of listeSoc">
+                    <a routerLink="uneactu/{{soc.ID_actu}}" class="text-reset">
+                        <img src="{{soc.adr_img}}" class="img-fluid card-img" alt="image">
+                        <div class="card-img-overlay text-center">
+                            <p class="card-text txtborder">{{soc.titre}}</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -68,8 +93,13 @@
             <h2>Culture</h2>
             <hr>
             <div class="row">
-                <div class="col-md-6" *ngFor="let cul of listeCul">
-                    <a routerLink="uneactu/{{cul.ID_actu}}"><img src="{{cul.adr_img}}" class="img-fluid" alt="image"></a>
+                <div class="col-md-6 card text-white noborder" *ngFor="let cul of listeCul">
+                    <a routerLink="uneactu/{{cul.ID_actu}}" class="text-reset">
+                        <img src="{{cul.adr_img}}" class="img-fluid card-img" alt="image">
+                        <div class="card-img-overlay text-center">
+                            <p class="card-text txtborder">{{cul.titre}}</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>

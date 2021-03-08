@@ -15,6 +15,7 @@ export class ActusService {
   urlActu: string = 'http://localhost:8080/actus/actu';
   urlFil: string = 'http://localhost:8080/actus/filactus';
   urlLus: string = 'http://localhost:8080/actus/pluslus';
+  urlRech: string = 'http://localhost:8080/actus/rech';
   actus: Array<Actus> = new Array<Actus>();
 
   constructor(private http: HttpClient) { }
@@ -94,6 +95,20 @@ export class ActusService {
     let API_URL = `${this.urlLus}`;
     console.log("API_URL : ", API_URL);
     
+    return this.http.get(API_URL)
+      .pipe(
+        map((res: any) => {
+          return res.rows || {}
+        }),
+        catchError(this.errorMgmt)
+      )
+  }
+
+  // Recupère une liste d'actus selon une recherche sur un mot-clé
+  getRech(rech: string): Observable<any> {
+    let API_URL = `${this.urlRech}/${rech}`;
+    console.log("API_URL : ", API_URL);
+    console.log("getRech rech : ", rech);
     return this.http.get(API_URL)
       .pipe(
         map((res: any) => {
