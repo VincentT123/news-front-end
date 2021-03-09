@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Actus } from 'src/app/interfaces/actus';
 import { ActusService } from 'src/app/services/actus.service';
 
@@ -16,7 +16,7 @@ export class CategorieComponent implements OnInit {
   actus: Actus = {};
   listeActus: Array <Actus> = new Array <Actus>();
 
-  constructor(private actusService: ActusService ,private route : ActivatedRoute) { }
+  constructor(private actusService: ActusService ,private route : ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
 
@@ -55,6 +55,11 @@ export class CategorieComponent implements OnInit {
       this.listeActus = res;
       console.log("listeActus : ", this.listeActus);
     });
+  }
+
+  lireActu(id:any) {
+    console.log("id : " , id);
+    this.router.navigate(['uneactu', id]);
   }
 
 }

@@ -10,6 +10,7 @@ import { CategorieComponent } from './composants/categorie/categorie.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UneactuComponent } from './composants/uneactu/uneactu.component';
 import { RechercheComponent } from './composants/recherche/recherche.component';
+import { AuthComponent } from './composants/auth/auth.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { RechercheComponent } from './composants/recherche/recherche.component';
     FooterComponent,
     CategorieComponent,
     UneactuComponent,
-    RechercheComponent
+    RechercheComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,

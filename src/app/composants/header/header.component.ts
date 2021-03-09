@@ -15,6 +15,19 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  logout () {
+    localStorage.removeItem("isConnected");
+    this.router.navigate(['']);
+  }
+
+  isConnected () {
+    if (Boolean(localStorage.getItem('isConnected'))) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   recherche() {
     this.router.navigate(['recherche', this.motcle]);
     this.motcle = "";

@@ -1,20 +1,27 @@
-<div class="container-fluid" style="background-color:black">
+<div class="container-fluid bg-blk">
   <ul class="nav justify-content-center">
     <li class="nav-item">
-      <a class="nav-link" href="#" style="color:red">A propos</a>
+      <a class="nav-link col-red">A propos</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#" style="color:red">Confidentialité</a>
+      <a class="nav-link col-red">Confidentialité</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#" style="color:red">Charte</a>
+      <a class="nav-link col-red">Charte</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#" style="color:red">Créer un compte</a>
+    <li class="nav-item" *ngIf=!isConnected()>
+      <a class="nav-link col-red">Créer un compte</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#" style="color:red">Se connecter</a>
+    <li class="nav-item" *ngIf=!isConnected()>
+      <a class="nav-link col-red" routerLink="auth">Se connecter</a>
     </li>
+    <li class="nav-item" *ngIf=isConnected()>
+      <a class="nav-link col-red lien">Bonjour Machin</a>
+    </li>
+    <li class="nav-item" *ngIf=isConnected()>
+      <a class="nav-link col-red lien" (click)="logout()">Se déconnecter</a>
+    </li>
+
   </ul>
 </div>
 <br>

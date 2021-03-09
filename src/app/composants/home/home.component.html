@@ -4,7 +4,7 @@
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item" *ngFor="let car of listeCar;let i=index" [ngClass]="i == 0 ? 'active' : ''">
-                        <a routerLink="uneactu/{{car.ID_actu}}">
+                        <a class="lien" (click)="lireActu(car.ID_actu)">
                             <img src="{{car.adr_img}}" class="d-block w-100" alt="image">
                             <div class="carousel-caption"><h3 class="txtborder">{{car.titre}}</h3></div>
                         </a>
@@ -27,7 +27,7 @@
         <div class="col-md-6">
             <div class="row row-cols-2 gy-3">
                 <div class="col card text-white noborder" *ngFor="let pan of listePan">
-                    <a routerLink="uneactu/{{pan.ID_actu}}" class="text-reset">
+                    <a class="text-reset lien" (click)="lireActu(pan.ID_actu)">
                         <img src="{{pan.adr_img}}" class="img-fluid" alt="image">
                         <div class="card-img-overlay text-center text-wrap">
                             <p class="card-text txtborder">{{pan.titre}}</p>
@@ -48,7 +48,7 @@
             <hr>
             <div class="row">
                 <div class="col-md-6 card text-white noborder" *ngFor="let pol of listePol">
-                    <a routerLink="uneactu/{{pol.ID_actu}}" class="text-reset">
+                    <a class="text-reset lien" (click)="lireActu(pol.ID_actu)">
                         <img src="{{pol.adr_img}}" class="img-fluid card-img" alt="image">
                         <div class="card-img-overlay text-center">
                             <p class="card-text txtborder">{{pol.titre}}</p>
@@ -62,7 +62,7 @@
             <hr>
             <div class="row">
                 <div class="col-md-6 card text-white noborder" *ngFor="let int of listeInt">
-                    <a routerLink="uneactu/{{int.ID_actu}}" class="text-reset">
+                    <a class="text-reset lien" (click)="lireActu(int.ID_actu)">
                         <img src="{{int.adr_img}}" class="img-fluid card-img" alt="image">
                         <div class="card-img-overlay text-center">
                             <p class="card-text txtborder">{{int.titre}}</p>
@@ -80,7 +80,7 @@
             <hr>
             <div class="row">
                 <div class="col-md-6 card text-white noborder" *ngFor="let soc of listeSoc">
-                    <a routerLink="uneactu/{{soc.ID_actu}}" class="text-reset">
+                    <a class="text-reset lien" (click)="lireActu(soc.ID_actu)">
                         <img src="{{soc.adr_img}}" class="img-fluid card-img" alt="image">
                         <div class="card-img-overlay text-center">
                             <p class="card-text txtborder">{{soc.titre}}</p>
@@ -94,7 +94,7 @@
             <hr>
             <div class="row">
                 <div class="col-md-6 card text-white noborder" *ngFor="let cul of listeCul">
-                    <a routerLink="uneactu/{{cul.ID_actu}}" class="text-reset">
+                    <a class="text-reset lien" (click)="lireActu(cul.ID_actu)">
                         <img src="{{cul.adr_img}}" class="img-fluid card-img" alt="image">
                         <div class="card-img-overlay text-center">
                             <p class="card-text txtborder">{{cul.titre}}</p>
@@ -116,7 +116,7 @@
             <div class="card mb-3" *ngFor="let fil of listeFil">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <a routerLink="uneactu/{{fil.ID_actu}}"><img src="{{fil.adr_img}}" class="img-fluid" alt="image"></a>
+                        <img src="{{fil.adr_img}}" class="img-fluid lien" alt="image" (click)="lireActu(fil.ID_actu)">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
@@ -132,7 +132,7 @@
             <div class="card mb-3" *ngFor="let lus of listeLus">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <a routerLink="uneactu/{{lus.ID_actu}}"><img src="{{lus.adr_img}}" class="img-fluid" alt="image"></a>
+                        <img src="{{lus.adr_img}}" class="img-fluid lien" alt="image" (click)="lireActu(lus.ID_actu)">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">

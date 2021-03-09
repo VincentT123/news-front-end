@@ -121,4 +121,9 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  lireActu(id:any) {
+    console.log("id : " , id);
+    this.router.navigate(['uneactu', id]);
+  }
+
 }

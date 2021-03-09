@@ -5,6 +5,10 @@ body {
     background-image: url("assets/img/fond.png");
 }
 
+.lien {
+    cursor: pointer;
+}
+
 .back-to-top {
     position: fixed;
     display: none;
