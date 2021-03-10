@@ -50,7 +50,7 @@
                 <div class="col-md-6 card text-white noborder depasspa" *ngFor="let pol of listePol">
                     <a class="text-reset lien" (click)="lireActu(pol.ID_actu)">
                         <img src="{{pol.adr_img}}" class="img-fluid card-img" alt="image">
-                        <div class="card-img-overlay text-center">
+                        <div class="card-img-overlay text-center text-wrap">
                             <p class="card-text txtborder">{{pol.titre}}</p>
                         </div>
                     </a>
@@ -64,7 +64,7 @@
                 <div class="col-md-6 card text-white noborder depasspa" *ngFor="let int of listeInt">
                     <a class="text-reset lien" (click)="lireActu(int.ID_actu)">
                         <img src="{{int.adr_img}}" class="img-fluid card-img" alt="image">
-                        <div class="card-img-overlay text-center">
+                        <div class="card-img-overlay text-center text-wrap">
                             <p class="card-text txtborder">{{int.titre}}</p>
                         </div>
                     </a>
@@ -82,7 +82,7 @@
                 <div class="col-md-6 card text-white noborder depasspa" *ngFor="let soc of listeSoc">
                     <a class="text-reset lien" (click)="lireActu(soc.ID_actu)">
                         <img src="{{soc.adr_img}}" class="img-fluid card-img" alt="image">
-                        <div class="card-img-overlay text-center">
+                        <div class="card-img-overlay text-center text-wrap">
                             <p class="card-text txtborder">{{soc.titre}}</p>
                         </div>
                     </a>
@@ -96,7 +96,7 @@
                 <div class="col-md-6 card text-white noborder depasspa" *ngFor="let cul of listeCul">
                     <a class="text-reset lien" (click)="lireActu(cul.ID_actu)">
                         <img src="{{cul.adr_img}}" class="img-fluid card-img" alt="image">
-                        <div class="card-img-overlay text-center">
+                        <div class="card-img-overlay text-center text-wrap">
                             <p class="card-text txtborder">{{cul.titre}}</p>
                         </div>
                     </a>
