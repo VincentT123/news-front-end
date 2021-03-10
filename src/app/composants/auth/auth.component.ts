@@ -29,9 +29,11 @@ export class AuthComponent implements OnInit {
       this.users = this.listeUsers[0];
       console.log("nom : ", this.users.nom_user);
       console.log("droits : ", this.users.droits);
+      console.log("id user : ", this.users.ID_user);
     });
-
-    if (1) {
+    
+    // if (this.users.ID_user !== undefined) {
+    if (1) {  
       localStorage.setItem("isConnected", "true");
       this.router.navigateByUrl("/home");
     } else {
