@@ -47,7 +47,7 @@
             <h2>Politique</h2>
             <hr>
             <div class="row">
-                <div class="col-md-6 card text-white noborder" *ngFor="let pol of listePol">
+                <div class="col-md-6 card text-white noborder depasspa" *ngFor="let pol of listePol">
                     <a class="text-reset lien" (click)="lireActu(pol.ID_actu)">
                         <img src="{{pol.adr_img}}" class="img-fluid card-img" alt="image">
                         <div class="card-img-overlay text-center">
@@ -61,7 +61,7 @@
             <h2>International</h2>
             <hr>
             <div class="row">
-                <div class="col-md-6 card text-white noborder" *ngFor="let int of listeInt">
+                <div class="col-md-6 card text-white noborder depasspa" *ngFor="let int of listeInt">
                     <a class="text-reset lien" (click)="lireActu(int.ID_actu)">
                         <img src="{{int.adr_img}}" class="img-fluid card-img" alt="image">
                         <div class="card-img-overlay text-center">
@@ -79,7 +79,7 @@
             <h2>Société</h2>
             <hr>
             <div class="row">
-                <div class="col-md-6 card text-white noborder" *ngFor="let soc of listeSoc">
+                <div class="col-md-6 card text-white noborder depasspa" *ngFor="let soc of listeSoc">
                     <a class="text-reset lien" (click)="lireActu(soc.ID_actu)">
                         <img src="{{soc.adr_img}}" class="img-fluid card-img" alt="image">
                         <div class="card-img-overlay text-center">
@@ -93,7 +93,7 @@
             <h2>Culture</h2>
             <hr>
             <div class="row">
-                <div class="col-md-6 card text-white noborder" *ngFor="let cul of listeCul">
+                <div class="col-md-6 card text-white noborder depasspa" *ngFor="let cul of listeCul">
                     <a class="text-reset lien" (click)="lireActu(cul.ID_actu)">
                         <img src="{{cul.adr_img}}" class="img-fluid card-img" alt="image">
                         <div class="card-img-overlay text-center">
